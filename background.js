@@ -1,5 +1,5 @@
 /*This background.js file will hold the main functionality of the program
- *
+ *Connor Edit
  *Program description:
  *This program is going to be the background portion of our game
  *it showcases a bunch of orange fish cycling across the screen. 
