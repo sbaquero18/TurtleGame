@@ -21,7 +21,7 @@ function updateObstacle() {
     jx = 680;
     jy = Math.floor((Math.random() * 480) + 1);
   } else {
-    jx = jx - 4;
+    jx = jx - 8;
   }
   //insert the code that draws the obstacle
   fill(178, 102, 255);
