@@ -11,37 +11,7 @@ design the background as well as
 initalize the character and obstalce by calling those functions and
 call the update functions for the character and the obstacle*/
 
-var yturtle;
 
-function initializeCharacter() {
-  yturtle = 430;
-}
-
-function updateCharacter() {
-  //insert code the make the character move when either the mouse
-  //moves or keys are pressed.
-  //println(keyCode);
-  if (keyCode == UP_ARROW){
-    yturtle = yturtle - 2;
-  }
-  else if (keyCode == DOWN_ARROW){
-    yturtle = yturtle + 2;
-  }
-
-  //insert the code that draws the character
-  noStroke();
-  fill(55, 132, 78);
-  ellipse(140, yturtle, 80, 30);
-  
-  
-  fill(72, 175, 103);
-  triangle(150, yturtle+7, 160, yturtle+9, 130, yturtle+20);
-  triangle(110, yturtle+5, 120, yturtle+7, 90, yturtle+10);
-  
-  
-  triangle(90, yturtle, 100, yturtle-2, 100, yturtle+2);
-  ellipse(180, yturtle, 10, 7);
-}
 function setup() {
  
   //these portions of code create the variables for each fish so that they operate independantly within my code
