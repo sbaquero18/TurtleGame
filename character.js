@@ -17,10 +17,10 @@ function updateCharacter() {
   //moves or keys are pressed.
   //println(keyCode);
   if (keyCode == UP_ARROW){
-    yturtle = yturtle - 2;
+    yturtle = yturtle - 4;
   }
   else if (keyCode == DOWN_ARROW){
-    yturtle = yturtle + 2;
+    yturtle = yturtle + 4;
   }
 
   //insert the code that draws the character
