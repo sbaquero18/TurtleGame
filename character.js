@@ -17,14 +17,12 @@ function updateCharacter() {
   //moves or keys are pressed.
   //println(keyCode);
   
-  while(yturtle > 0 || yturtle < 400){
     if (keyCode == UP_ARROW){
       yturtle = yturtle - 4;
     }
     else if (keyCode == DOWN_ARROW){
       yturtle = yturtle + 4;
     }
-  }
 
   //insert the code that draws the character
   noStroke();
