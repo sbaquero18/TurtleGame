@@ -36,7 +36,9 @@ function setup() {
 
 function Updatescore() {
  score++;
- if(score<10) {
+ if(score < 0) {
+  score = 0;
+ } else if(score < 10) {
   scoreText = 0;
  } else {
   scoreText = Math.floor(score/10);
