@@ -2,12 +2,14 @@
  * that intialize and udpate the obstacle
  *
  *File description:
- *ADD HERE
+ *This is the code that defines the two jellyfish that fly across the screen 
  *
  */
-
+//These are the two variables that define where the jellyfish are at a given time
 var jx, jy, jx2, jy2;
 
+
+//The starting x and y values for each jellyfish
 function initializeObstacle() {
   jx = 750;
   jx2 = 680;
@@ -17,7 +19,7 @@ function initializeObstacle() {
 
 function updateObstacle() {
   
-  //insert code the make the obstacle move automatically
+  //insert code to make the obstacle move automatically
   //and reset to random positions so the game isn't boring.
   if(jx <= 0) {
     jx = 680;
