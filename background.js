@@ -38,7 +38,7 @@ function Updatescore() {
  score++;
  fill(0, 0, 0);
  textSize(20);
- text("Score: " + score, 630, 470);
+ text("Score: " + score, 600, 20);
 }
 
 function draw() {
