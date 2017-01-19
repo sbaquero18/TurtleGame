@@ -16,11 +16,15 @@ function updateCharacter() {
   //insert code the make the character move when either the mouse
   //moves or keys are pressed.
   //println(keyCode);
-  if (keyCode == UP_ARROW){
+  
+  if (0 < y || y < 480) {
+    
+    if (keyCode == UP_ARROW){
     yturtle = yturtle - 4;
-  }
-  else if (keyCode == DOWN_ARROW){
+    }
+    else if (keyCode == DOWN_ARROW){
     yturtle = yturtle + 4;
+    }
   }
 
   //insert the code that draws the character
@@ -36,4 +40,6 @@ function updateCharacter() {
   
   triangle(90, yturtle, 100, yturtle-2, 100, yturtle+2);
   ellipse(180, yturtle, 10, 7);
+ 
+  
 }
