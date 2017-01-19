@@ -16,11 +16,14 @@ function updateCharacter() {
   //insert code the make the character move when either the mouse
   //moves or keys are pressed.
   //println(keyCode);
-  if (keyCode == UP_ARROW){
-    yturtle = yturtle - 4;
-  }
-  else if (keyCode == DOWN_ARROW){
-    yturtle = yturtle + 4;
+  
+  while(y > 0 || y < 400){
+    if (keyCode == UP_ARROW){
+      yturtle = yturtle - 4;
+    }
+    else if (keyCode == DOWN_ARROW){
+      yturtle = yturtle + 4;
+    }
   }
 
   //insert the code that draws the character
