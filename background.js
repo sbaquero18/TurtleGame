@@ -33,7 +33,7 @@ function setup() {
    initializeCharacter();
    initializeObstacle();
 }
-
+// This is the code that represents the scoreboard. It starts @ 0, and continues to add on until it touches a jellyfish. 
 function Updatescore() {
  score++;
  if(score < 0) {
