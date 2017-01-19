@@ -47,7 +47,7 @@ function Updatescore() {
  textSize(10);
  text("Score: " + scoreText, 450, 20);
 }
-
+//This draws and redraws our background after each unit of time so that we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
   background(0, 0, 255);
