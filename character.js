@@ -18,7 +18,7 @@ function initializeCharacter() {
 function updateCharacter() {
   //println(keyCode);
   //This keeps the turtle on the screen.
-  if (yturtle == 0) { 
+  if (yturtle <= 0) { 
     yturtle = 5;
   }
   //This allows the turtle to move up when the keys are pressed. 
@@ -26,8 +26,8 @@ function updateCharacter() {
      yturtle = yturtle - 4;
   }
   //This keeps the turtle on the screen.
-  if (yturtle == 480){
-    yturtle = 475;
+  if (yturtle >= 480){
+    yturtle = 478;
   }
   
     //This mvoes the turtle down when the down key is pressed.
