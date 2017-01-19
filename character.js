@@ -19,11 +19,11 @@ function updateCharacter() {
   //println(keyCode);
   //This keeps the turtle on the screen.
   if (yturtle <= 0) { 
-    yturtle = 5;
+   yturtle = 5;
   }
   //This allows the turtle to move up when the keys are pressed. 
   if (keyCode == UP_ARROW){
-     yturtle = yturtle - 4;
+    yturtle = yturtle - 4;
   }
   //This keeps the turtle on the screen.
   if (yturtle >= 480){
@@ -32,7 +32,7 @@ function updateCharacter() {
   
     //This mvoes the turtle down when the down key is pressed.
    else if (keyCode == DOWN_ARROW){
-      yturtle = yturtle + 4;
+     yturtle = yturtle + 4;
    }
 
   //The code below draws the parts of the turtle. 
