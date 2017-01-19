@@ -136,6 +136,6 @@ function collide(){
   rect1.y < rect3.y + rect3.height &&
   rect1.height + rect1.y > rect3.y) {
     rect(100,100,100,100);
-    score = score - 10;
+    score = score - 100;
    }
 }
