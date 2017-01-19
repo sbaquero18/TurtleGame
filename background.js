@@ -10,7 +10,7 @@ A person responsible for this file should
 design the background as well as
 initalize the character and obstalce by calling those functions and
 call the update functions for the character and the obstacle*/
-
+var score;
 
 function setup() {
  
@@ -41,6 +41,7 @@ function draw() {
   updateCharacter();
   updateObstacle();
   collide();
+  score();
 }
 
 
@@ -114,5 +115,12 @@ function collide(){
   rect1.y < rect2.y + rect2.height &&
   rect1.height + rect1.y > rect2.y) {
     rect(100,100,100,100);
+    score = score - 10;
    }
+}
+
+function score() {
+ score++;
+ textSize(20);
+ text("Score: " + score, 630, 470);
 }
