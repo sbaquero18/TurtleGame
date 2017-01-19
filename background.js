@@ -29,7 +29,7 @@ function setup() {
    y4=y-100
    x5=x-250;
    y5=y+200;
-   
+   score = 0;
    initializeCharacter();
    initializeObstacle();
 }
