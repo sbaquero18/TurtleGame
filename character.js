@@ -17,7 +17,7 @@ function updateCharacter() {
   //moves or keys are pressed.
   //println(keyCode);
   
-  while(y > 0 || y < 400){
+  if(y > 0 || y < 400){
     if (keyCode == UP_ARROW){
       yturtle = yturtle - 4;
     }
