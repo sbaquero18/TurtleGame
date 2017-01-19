@@ -35,7 +35,7 @@ function setup() {
 }
 
 function Updatescore() {
- score++;
+ score = score + 0.01;
  fill(0, 0, 0);
  textSize(10);
  text("Score: " + score, 450, 20);
