@@ -11,7 +11,7 @@ design the background as well as
 initalize the character and obstalce by calling those functions and
 call the update functions for the character and the obstacle*/
 var score;
-
+var scoreText;
 function setup() {
  
   //these portions of code create the variables for each fish so that they operate independantly within my code
@@ -35,10 +35,15 @@ function setup() {
 }
 
 function Updatescore() {
- score = score + 0.01;
+ score++;
+ if(score<10) {
+  scoreText = 0;
+ else {
+  scoreText = Math.floor(score/10);
+ }
  fill(0, 0, 0);
  textSize(10);
- text("Score: " + score, 450, 20);
+ text("Score: " + scoreText, 450, 20);
 }
 
 function draw() {
