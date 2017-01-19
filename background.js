@@ -40,6 +40,7 @@ function draw() {
   updateBackground();
   updateCharacter();
   updateObstacle();
+  collide();
 }
 
 
@@ -103,3 +104,15 @@ function updateBackground(){
 
 
 //Change or implement as needed
+
+function collide(){
+ var rect1 = {x: 100, y: yturtle-30, width: 80, height: 30}
+ var rect2 = {x: jx-12, y: jy-12 , width: 24, height: 24}
+
+ if (rect1.x < rect2.x + rect2.width &&
+  rect1.x + rect1.width > rect2.x &&
+  rect1.y < rect2.y + rect2.height &&
+  rect1.height + rect1.y > rect2.y) {
+    rect(100,100,100,100);
+   }
+}
