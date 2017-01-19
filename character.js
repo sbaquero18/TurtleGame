@@ -17,15 +17,23 @@ function initializeCharacter() {
 //This function allows the character to be moved with the arrow keys, up and down using two if statements. 
 function updateCharacter() {
   //println(keyCode);
-  
+  //This keeps the turtle on the screen.
+  if (yturtle == 0) { 
+    yturtle = 5;
+  }
   //This allows the turtle to move up when the keys are pressed. 
-    if (keyCode == UP_ARROW){
-      yturtle = yturtle - 4;
-    }
-  //This mvoes the turtle down when the down key is pressed.
-    else if (keyCode == DOWN_ARROW){
+  if (keyCode == UP_ARROW){
+     yturtle = yturtle - 4;
+  }
+  //This keeps the turtle on the screen.
+  if (yturtle == 480){
+    yturtle = 475;
+  }
+  
+    //This mvoes the turtle down when the down key is pressed.
+   else if (keyCode == DOWN_ARROW){
       yturtle = yturtle + 4;
-    }
+   }
 
   //The code below draws the parts of the turtle. 
   noStroke();
