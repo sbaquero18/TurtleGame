@@ -38,7 +38,7 @@ function Updatescore() {
  score++;
  if(score<10) {
   scoreText = 0;
- else {
+ } else {
   scoreText = Math.floor(score/10);
  }
  fill(0, 0, 0);
