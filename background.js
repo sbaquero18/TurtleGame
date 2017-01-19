@@ -34,6 +34,12 @@ function setup() {
    initializeObstacle();
 }
 
+function Updatescore() {
+ score++;
+ textSize(20);
+ text("Score: " + score, 630, 470);
+}
+
 function draw() {
   //clear();
   background(0, 0, 255);
@@ -41,7 +47,7 @@ function draw() {
   updateCharacter();
   updateObstacle();
   collide();
-  score();
+  Updatescore();
 }
 
 
@@ -117,10 +123,4 @@ function collide(){
     rect(100,100,100,100);
     score = score - 10;
    }
-}
-
-function score() {
- score++;
- textSize(20);
- text("Score: " + score, 630, 470);
 }
