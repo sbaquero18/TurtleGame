@@ -37,8 +37,8 @@ function setup() {
 function Updatescore() {
  score++;
  fill(0, 0, 0);
- textSize(20);
- text("Score: " + score, 600, 20);
+ textSize(10);
+ text("Score: " + score, 580, 20);
 }
 
 function draw() {
