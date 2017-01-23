@@ -1,8 +1,11 @@
-/*This background.js file will hold the main functionality of the program
- *
+/*Sebastian Baquero
+ *January 23, 2017
  *Program description:
  *This program is going to be the background portion of our game
- *it showcases a bunch of orange fish cycling across the screen. 
+ *it showcases a variety of orange fish cycling across the screen. 
+ The background.js file also functions as the "hub" for our code
+ as it initializes and brings all of the other aspects of the 
+ progam to the scene. 
  */
 
 /*NOTES:
@@ -10,13 +13,26 @@ A person responsible for this file should
 design the background as well as
 initalize the character and obstalce by calling those functions and
 call the update functions for the character and the obstacle*/
+
+//The two score variables here allow for the intialization
+//of our scoreboard that is at the top of the screen
 var score;
 var scoreText;
+
+//This is the function that dictates the setup of our
+//code and creates everything that we need in our scene
 function setup() {
  
-  //these portions of code create the variables for each fish so that they operate independantly within my code
-  createCanvas(640, 480);
+  //these portions of code create the variables for each fish so
+ //that they operate independantly within my code
+ 
+ //This creates the size and color of the background
+ createCanvas(640, 480);
   background(0,0,255);
+ 
+ //The x variable designates where the fish will be in
+ //the horizontal direction while the y variable indicates
+ //the vertical location as well. 
    x = 500;
    y = 200;
    x1= x-400;
@@ -30,10 +46,12 @@ function setup() {
    x5=x-250;
    y5=y+200;
    score = 0;
-   initializeCharacter();
+ //Allows for the character and obstacles to spawn into the game  
+ initializeCharacter();
    initializeObstacle();
 }
-// This is the code that represents the scoreboard. It starts @ 0, and continues to add on until it touches a jellyfish. 
+// This is the code that represents the scoreboard. It starts @ 0, 
+//and continues to add on until it touches a jellyfish. 
 function Updatescore() {
  score++;
  if(score < 0) {
@@ -47,7 +65,8 @@ function Updatescore() {
  textSize(10);
  text("Score: " + scoreText, 450, 20);
 }
-//This draws and redraws our background after each unit of time so that we dont have trails of vectors that follow our objects around. 
+//This draws and redraws our background after each unit of time so that
+//we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
   background(0, 0, 255);
@@ -115,30 +134,26 @@ function updateBackground(){
   }
 }
 
-//Change or implement as needed
 
 
-//Change or implement as needed
+function collide(){
+ var rect1 = {x: 100, y: yturtle-30, width: 80, height: 30}
+ var rect2 = {x: jx-12, y: jy-12 , width: 24, height: 24}
+ var rect3 = {x: jx2-12, y: jy2-12 , width: 24, height: 24}
 
-function collide(){  //this function tracts the turtle and jelly fish, and changes the score based of their collision
-	 var rect1 = {x: 100, y: yturtle-30, width: 80, height: 30} //turtle
-	 var rect2 = {x: jx-12, y: jy-12 , width: 24, height: 24} //jellyfish one
-	 var rect3 = {x: jx2-12, y: jy2-12 , width: 24, height: 24} //jellyfish two
-	
-
-	 if (rect1.x < rect2.x + rect2.width && //if rect’s are touching
-	  rect1.x + rect1.width > rect2.x &&
-	  rect1.y < rect2.y + rect2.height &&
-	  rect1.height + rect1.y > rect2.y) {
-	    rect(100,100,100,100);
-	    score = score - 10;
-	   }
-	 
-	 if (rect1.x < rect3.x + rect3.width && //if rect’s are touching
-	  rect1.x + rect1.width > rect3.x &&
-	  rect1.y < rect3.y + rect3.height &&
-	  rect1.height + rect1.y > rect3.y) {
-	    rect(100,100,100,100);
-	    score = score - 100;
-	   }
-	}
+ if (rect1.x < rect2.x + rect2.width &&
+  rect1.x + rect1.width > rect2.x &&
+  rect1.y < rect2.y + rect2.height &&
+  rect1.height + rect1.y > rect2.y) {
+    rect(100,100,100,100);
+    score = score - 10;
+   }
+ 
+ if (rect1.x < rect3.x + rect3.width &&
+  rect1.x + rect1.width > rect3.x &&
+  rect1.y < rect3.y + rect3.height &&
+  rect1.height + rect1.y > rect3.y) {
+    rect(100,100,100,100);
+    score = score - 100;
+   }
+}
