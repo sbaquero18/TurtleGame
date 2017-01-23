@@ -1,36 +1,35 @@
-/*This character.js file will hold the functions 
- * that intialize and udpate the character
- *
- *File description:
- *This program creates the turtle that moves up and down using the up and down arrow keys.
- *
+/*Dylan Levene
+January 23rd, 2017
+ This program creates the turtle that moves up and down using the up and down arrow keys. It uses the function updateCharacter, which creates the code for the character. Using the function initializeCharacter the character can be placed in the screen. This piece of code is used in setup function on the background.js file. 
+ 
  */
 
-//This creates the variable for the y position of the turtle. 
+//This creates the variable for the y position of the turtle.
 var yturtle;
 
-//This function will initialize the turtle. It sets up the placement of the turtle and initialized the variable yturtle. 
+//This function will initialize the turtle and place it on the screen. It sets up the placement of the turtle at y = 430. This function is placed in the set up function of the background.js file. 
 function initializeCharacter() {
   yturtle = 430;
 }
 
-//This function allows the character to be moved with the arrow keys, up and down using two if statements. 
+//This function first draws the character. It also allows the character to be moved with the arrow keys, up and down using two if statements. 
 function updateCharacter() {
-  //println(keyCode);
   //This keeps the turtle on the screen.
   if (yturtle <= 0) { 
    yturtle = 5;
   }
-  //This allows the turtle to move up when the keys are pressed. 
+  
+  //This allows the turtle to move up when the keys are pressed.  
   if (keyCode == UP_ARROW){
     yturtle = yturtle - 4;
   }
+  
   //This keeps the turtle on the screen.
   if (yturtle >= 480){
     yturtle = 478;
   }
   
-    //This mvoes the turtle down when the down key is pressed.
+    //This moves the turtle down when the down key is pressed.
    else if (keyCode == DOWN_ARROW){
      yturtle = yturtle + 4;
    }
