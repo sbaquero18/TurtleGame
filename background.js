@@ -53,17 +53,17 @@ function setup() {
 // This is the code that represents the scoreboard. It starts @ 0, 
 //and continues to add on until it touches a jellyfish. 
 function Updatescore() {
- score++;
- if(score < 0) {
-  score = 0;
- } else if(score < 10) {
-  scoreText = 0;
- } else {
-  scoreText = Math.floor(score/10);
+ score++; //first add score
+ if(score < 0) { //if score gets lower than 0
+  score = 0; //set it back to 0
+ } else if(score < 10) { //if score is less than 10
+  scoreText = 0; //set the score that gets displayed to zero
+ } else { //if the score is larger than or equal to 10
+  scoreText = Math.floor(score/10); //set the score to display 1/10 of its actual score(score is too big so it's displaying this way)
  }
- fill(0, 0, 0);
- textSize(10);
- text("Score: " + scoreText, 450, 20);
+ fill(0, 0, 0); //set the color of the font
+ textSize(10); //set the size of the font
+ text("Score: " + scoreText, 450, 20); //display the score on the screen
 }
 //This draws and redraws our background after each unit of time so that
 //we dont have trails of vectors that follow our objects around. 
