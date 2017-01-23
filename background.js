@@ -146,7 +146,7 @@ function collide(){  //this function tracts the turtle and jelly fish, and chang
 	  rect1.x + rect1.width > rect2.x && //if jellyfish width overlaps turt
 	  rect1.y < rect2.y + rect2.height && //if the heights overlaps
 	  rect1.height + rect1.y > rect2.y) {
-	    rect(100,100,100,100);
+	    //rect(100,100,100,100);
 	    score = score - 10; //score decreases
 	   }
 	 
@@ -154,7 +154,7 @@ function collide(){  //this function tracts the turtle and jelly fish, and chang
 	  rect1.x + rect1.width > rect3.x &&
 	  rect1.y < rect3.y + rect3.height &&
 	  rect1.height + rect1.y > rect3.y) {
-	    rect(100,100,100,100);
+	    //rect(100,100,100,100);
 	    score = score - 100;
 	   }
 	}
