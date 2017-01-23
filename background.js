@@ -120,24 +120,25 @@ function updateBackground(){
 
 //Change or implement as needed
 
-function collide(){
- var rect1 = {x: 100, y: yturtle-30, width: 80, height: 30}
- var rect2 = {x: jx-12, y: jy-12 , width: 24, height: 24}
- var rect3 = {x: jx2-12, y: jy2-12 , width: 24, height: 24}
+function collide(){  //this function tracts the turtle and jelly fish, and changes the score based of their collision
+	 var rect1 = {x: 100, y: yturtle-30, width: 80, height: 30} //turtle
+	 var rect2 = {x: jx-12, y: jy-12 , width: 24, height: 24} //jellyfish one
+	 var rect3 = {x: jx2-12, y: jy2-12 , width: 24, height: 24} //jellyfish two
+	
 
- if (rect1.x < rect2.x + rect2.width &&
-  rect1.x + rect1.width > rect2.x &&
-  rect1.y < rect2.y + rect2.height &&
-  rect1.height + rect1.y > rect2.y) {
-    rect(100,100,100,100);
-    score = score - 10;
-   }
- 
- if (rect1.x < rect3.x + rect3.width &&
-  rect1.x + rect1.width > rect3.x &&
-  rect1.y < rect3.y + rect3.height &&
-  rect1.height + rect1.y > rect3.y) {
-    rect(100,100,100,100);
-    score = score - 100;
-   }
-}
+	 if (rect1.x < rect2.x + rect2.width && //if rect’s are touching
+	  rect1.x + rect1.width > rect2.x &&
+	  rect1.y < rect2.y + rect2.height &&
+	  rect1.height + rect1.y > rect2.y) {
+	    rect(100,100,100,100);
+	    score = score - 10;
+	   }
+	 
+	 if (rect1.x < rect3.x + rect3.width && //if rect’s are touching
+	  rect1.x + rect1.width > rect3.x &&
+	  rect1.y < rect3.y + rect3.height &&
+	  rect1.height + rect1.y > rect3.y) {
+	    rect(100,100,100,100);
+	    score = score - 100;
+	   }
+	}
