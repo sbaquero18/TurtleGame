@@ -62,7 +62,7 @@ function Updatescore() {
   scoreText = Math.floor(score/10); //set the score to display 1/10 of its actual score(score is too big so it's displaying this way)
  }
  fill(0, 0, 0); //set the color of the font
- textSize(10); //set the size of the font
+ textSize(20); //set the size of the font
  text("Score: " + scoreText, 450, 20); //display the score on the screen
 }
 //This draws and redraws our background after each unit of time so that
