@@ -1,45 +1,65 @@
-/*This obstacle.js file will hold the functions 
- * that intialize and udpate the obstacle
- *
- *File description:
- *This is the code that defines the two jellyfish that fly across the screen 
- *
+/*
+ *                                  _________
+ *                           _.--""'-----,   `"--.._
+ *                        .-''   _/_      ; .'"----,`-,
+ *                      .'      :___:     ; :      ;;`.`.
+ *                     .      _.- _.-    .' :      ::  `..
+ *                  __;..----------------' :: ___  ::   ;;
+ *             .--"". '           ___.....`:=(___)-' :--'`.
+ *           .'   .'         .--''__       :       ==:    ;
+ *       .--/    /        .'.''     ``-,   :         :   '`-.
+ *    ."', :    /       .'-`\\       .--.\ :         :  ,   _\
+ *   ;   ; |   ;       /:'  ;;      /__  \\:         :  :  /_\\
+ *   |\_/  |   |      / \__//      /"--\\ \:         :  : ;|`\|    
+ *   : "  /\__/\____//   """      /     \\ :         :  : :|'||
+ * ["""""""""--------........._  /      || ;      __.:--' :|//|
+ *  "------....______         ].'|      // |--"""'__...-'`\ \//
+ *    `| JUNOKIM |__;_...--'": :  \    //  |---"""      \__\_/
+ *      """""""""'            \ \  \_.//  /
+ *        `---'                \ \_     _'
+ *                              `--`---'  
+ * This obstacle.js file will hold the functions 
+ * that intialize and update the obstacle
+ * 1/23/2017 Junho Kim
+ * File description:
+ * This is the code that defines the two jellyfish that fly across the screen 
+ * 
  */
-//These are the two variables that define where the jellyfish are at a given time
+//These are the four variables that define where the two jellyfish are at a given time
 var jx, jy, jx2, jy2;
 
 
-//The starting x and y values for each jellyfish
+//setting the starting x and y values for each jellyfish
 function initializeObstacle() {
   jx = 750;
   jx2 = 680;
   jy = 240;
   jy2 = 240;
 }
-
-function updateObstacle() {
+//this function gets called in draw function, setting position of jellyfish and draw the jellyfish
+function updateObstacle() { 
   
-  //insert code to make the obstacle move automatically
+  //make the obstacle move automatically
   //and reset to random positions so the game isn't boring.
-  if(jx <= 0) {
-    jx = 680;
-    jy = Math.floor((Math.random() * 480) + 1);
-  } else {
-    jx = jx - 8;
+  if(jx <= 0) { //when jellyfish is out of screen
+    jx = 680; //move jellyfish back to the right
+    jy = Math.floor((Math.random() * 480) + 1); //set random y position
+  } else { //if not
+    jx = jx - 8; //just make it move to the left
   }
-  if(jx2 <= 0) {
+  if(jx2 <= 0) { //this is same as the if statement above
     jx2 = 680;
     jy2 = Math.floor((Math.random() * 480) + 1);
   } else {
     jx2 = jx2 - 10;
   }
-  //insert the code that draws the obstacle
-  fill(178, 102, 255);
-  ellipse(jx, jy, 24, 24);
-  ellipse(jx2, jy2, 24, 24);
-  stroke(178, 102, 255);
-  strokeWeight(4);
-  line(jx - 12, jy, jx - 12, jy + 30);
+  //the code that draws the obstacle
+  fill(178, 102, 255); //set color of the main body of jellyfish
+  ellipse(jx, jy, 24, 24); //make main body of jellyfish
+  ellipse(jx2, jy2, 24, 24); //make another main body of jellyfish
+  stroke(178, 102, 255); //set color of the jelly-legs of the jellyfish
+  strokeWeight(4); //make jelly-legs thicker
+  line(jx - 12, jy, jx - 12, jy + 30); //these all draw jelly-legs
   line(jx + 12, jy, jx + 12, jy + 30);
   line(jx - 6, jy + 6, jx - 6, jy + 24);
   line(jx + 6, jy + 6, jx + 6, jy + 24);
@@ -48,11 +68,5 @@ function updateObstacle() {
   line(jx2 + 12, jy2, jx2 + 12, jy2 + 30);
   line(jx2 - 6, jy2 + 6, jx2 - 6, jy2 + 24);
   line(jx2 + 6, jy2 + 6, jx2 + 6, jy2 + 24);
-  line(jx2, jy2 + 12, jx2, jy2 + 30);
+  line(jx2, jy2 + 12, jx2, jy2 + 30); //yeah a lot of jelly-legs
 }
-
-/** TESTING CODE **/
-/* This code should be commented when the team has put all
-the files in one project. But you will need this code to test
-the character functions. Add the code to test your functions in here.
-*/
