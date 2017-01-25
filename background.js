@@ -18,6 +18,7 @@ call the update functions for the character and the obstacle*/
 //of our scoreboard that is at the top of the screen
 var score;
 var scoreText;
+var highscore = 0;
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -64,6 +65,10 @@ function Updatescore() {
  fill(0, 0, 0); //set the color of the font
  textSize(20); //set the size of the font
  text("Score: " + scoreText, 450, 20); //display the score on the screen
+ if(highscore < scoreText) {
+  highscore = scoreText;
+ }
+ document.getElementById("scoreboard").innerHTML = "High Score: " + highscore;
 }
 //This draws and redraws our background after each unit of time so that
 //we dont have trails of vectors that follow our objects around. 
