@@ -1,5 +1,15 @@
 body{
-  width: 640px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#game{
+  width: 640px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid, 3px, black;
+  border-radius: 5px;
+  background-color: black;
 }
