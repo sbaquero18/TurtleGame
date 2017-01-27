@@ -13,3 +13,8 @@ body{
   border-radius: 5px;
   background-color: black;
 }
+
+#description {
+ min-height: 100%;
+ height: 100%
+}
