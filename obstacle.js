@@ -27,8 +27,10 @@
  */
 //These are the four variables that define where the two jellyfish are at a given time
 var jx, jy, jx2, jy2;
-var jellyfish = loadImage("jellyfish.png");
-
+var jellyfish;
+function Preload() {
+ jellyfish = loadImage("jellyfish.png");
+} 
 //setting the starting x and y values for each jellyfish
 function initializeObstacle() {
   jx = 750;
