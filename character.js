@@ -38,7 +38,7 @@ function updateCharacter() {
 
   //The code below draws the parts of the turtle. 
   noStroke();
-  image(turtle, 140, yturtle);
+  image(turtleimage, 140, yturtle);
  /*
   //body
   fill(55, 132, 78);
