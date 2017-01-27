@@ -19,6 +19,7 @@ call the update functions for the character and the obstacle*/
 var score;
 var scoreText;
 var highscore = 0;
+var fish  = loadImage("fish.png");
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -85,13 +86,19 @@ function draw() {
 
 //This code here is what prints the fish onto the page onto their selected locations. 
 function updateBackground(){
+  /*
   fill (255,100,20);
   ellipse( x-200,y-50,10);
   ellipse( x1,y1,10);
   ellipse( x2,y2,10);
   ellipse( x3,y4,10);
   ellipse( x5,y5,10);
- 
+ */
+  image(fish, x-200, y-5);
+  image(fish, x1, y1);
+  image(fish, x2, y2);
+  image(fish, x3, y4);
+  image(fish, x5, y5);
   //all of the lines of code below here are what set the permissions of each fish and 
   //make it so that they will move across the screen at a given speed until they reach the end of the screen
   //once they reach the end they will reset and start again. 
