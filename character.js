@@ -7,12 +7,10 @@ January 23rd, 2017
 //This creates the variable for the y position of the turtle.
 var yturtle;
 var turtleimage;
-function Preload() {
- turtleimage = loadImage("turtle.png");
-} 
 //This function will initialize the turtle and place it on the screen. It sets up the placement of the turtle at y = 430. This function is placed in the set up function of the background.js file. 
 function initializeCharacter() {
   yturtle = 430;
+  turtleimage = loadImage("turtle.png");
 }
 
 //This function first draws the character. It also allows the character to be moved with the arrow keys, up and down using two if statements. 
