@@ -19,20 +19,23 @@ function updateCharacter() {
    yturtle = 5;
   }
   
-  //This allows the turtle to move up when the keys are pressed.  
-  if (keyCode == UP_ARROW){
-    yturtle = yturtle - 4;
-  }
+ //The keyIsPressed variable is used to only have the turtle moving up and down when the keys and being pressed. 
+  if (keyIsPressed === true) {
+    //This allows the turtle to move up when the keys are pressed.
+    if (keyCode == UP_ARROW){
+      yturtle = yturtle - 4;
+    }
   
-  //This keeps the turtle on the screen.
-  if (yturtle >= 480){
-    yturtle = 478;
-  }
+    //This keeps the turtle on the screen.
+    if (yturtle >= 480){
+      yturtle = 478;
+    }
   
     //This moves the turtle down when the down key is pressed.
-   else if (keyCode == DOWN_ARROW){
+      else if (keyCode == DOWN_ARROW){
      yturtle = yturtle + 4;
-   }
+    }
+  }
 
   //The code below draws the parts of the turtle. 
   noStroke();
