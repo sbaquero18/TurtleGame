@@ -30,7 +30,7 @@ function setup() {
  
  //This creates the size and color of the background
  createCanvas(640, 480);
-  background(0,0,255);
+  background(50, 115, 219);
  
  //The x variable designates where the fish will be in
  //the horizontal direction while the y variable indicates
@@ -63,7 +63,7 @@ function Updatescore() {
  } else { //if the score is larger than or equal to 10
   scoreText = Math.floor(score/10); //set the score to display 1/10 of its actual score(score is too big so it's displaying this way)
  }
- fill(0, 0, 0); //set the color of the font
+ fill(255, 255, 255); //set the color of the font
  textSize(20); //set the size of the font
  text("Score: " + scoreText, 450, 20); //display the score on the screen
  if(highscore < scoreText) {
@@ -75,7 +75,7 @@ function Updatescore() {
 //we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
-  background(0, 0, 255);
+  background(50, 115, 219);
   updateBackground();
   updateCharacter();
   updateObstacle();
