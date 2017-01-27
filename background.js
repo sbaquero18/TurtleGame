@@ -19,6 +19,7 @@ call the update functions for the character and the obstacle*/
 var score;
 var scoreText;
 var highscore = 0;
+var gameplay = false;
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -58,7 +59,7 @@ function Updatescore() {
  if(score < 0) { //if score gets lower than 0
   score = 0; //set it back to 0
  } else if(score < 10) { //if score is less than 10
-  scoreText = 0; //set the score that gets displayed to zero
+  scoreText = 0; //set the score that gets displayed to zero320
  } else { //if the score is larger than or equal to 10
   scoreText = Math.floor(score/10); //set the score to display 1/10 of its actual score(score is too big so it's displaying this way)
  }
@@ -74,12 +75,23 @@ function Updatescore() {
 //we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
-  background(0, 0, 255);
-  updateBackground();
-  updateCharacter();
-  updateObstacle();
-  collide();
-  Updatescore();
+  if(keyIsPressed) {
+   gameplay = true;	  
+  }
+  if(gameplay == true) {
+   background(0, 0, 255);
+   updateBackground();
+   updateCharacter();
+   updateObstacle();
+   collide();
+   Updatescore();
+  } else {
+   fill(0, 0, 0); //set the color of the font
+   textSize(40); //set the size of the font
+   text("Turtle Game", 320, 300); //display the score on the screen
+   textSize(20); //set the size of the font
+   text("Press Any Key to Play", 320, 100); //display the score on the screen
+  }
 }
 
 
