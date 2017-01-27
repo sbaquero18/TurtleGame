@@ -19,7 +19,6 @@ call the update functions for the character and the obstacle*/
 var score;
 var scoreText;
 var highscore = 0;
-var fish;
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -27,9 +26,10 @@ function setup() {
  
   //these portions of code create the variables for each fish so
  //that they operate independantly within my code
+ 
  //This creates the size and color of the background
  createCanvas(640, 480);
-  background(50, 115, 219);
+  background(0,0,255);
  
  //The x variable designates where the fish will be in
  //the horizontal direction while the y variable indicates
@@ -50,7 +50,6 @@ function setup() {
  //Allows for the character and obstacles to spawn into the game  
  initializeCharacter();
    initializeObstacle();
-	fish  = loadImage("fish.png");
 }
 // This is the code that represents the scoreboard. It starts @ 0, 
 //and continues to add on until it touches a jellyfish. 
@@ -63,7 +62,7 @@ function Updatescore() {
  } else { //if the score is larger than or equal to 10
   scoreText = Math.floor(score/10); //set the score to display 1/10 of its actual score(score is too big so it's displaying this way)
  }
- fill(255, 255, 255); //set the color of the font
+ fill(0, 0, 0); //set the color of the font
  textSize(20); //set the size of the font
  text("Score: " + scoreText, 450, 20); //display the score on the screen
  if(highscore < scoreText) {
@@ -75,7 +74,7 @@ function Updatescore() {
 //we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
-  background(50, 115, 219);
+  background(0, 0, 255);
   updateBackground();
   updateCharacter();
   updateObstacle();
@@ -86,19 +85,13 @@ function draw() {
 
 //This code here is what prints the fish onto the page onto their selected locations. 
 function updateBackground(){
-  /*
   fill (255,100,20);
   ellipse( x-200,y-50,10);
   ellipse( x1,y1,10);
   ellipse( x2,y2,10);
   ellipse( x3,y4,10);
   ellipse( x5,y5,10);
- */
-  image(fish, x-200, y-5);
-  image(fish, x1, y1);
-  image(fish, x2, y2);
-  image(fish, x3, y4);
-  image(fish, x5, y5);
+ 
   //all of the lines of code below here are what set the permissions of each fish and 
   //make it so that they will move across the screen at a given speed until they reach the end of the screen
   //once they reach the end they will reset and start again. 
