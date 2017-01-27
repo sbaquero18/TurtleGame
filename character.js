@@ -6,7 +6,7 @@ January 23rd, 2017
 
 //This creates the variable for the y position of the turtle.
 var yturtle;
-
+var turtleimage = loadImage("turtle.png");
 //This function will initialize the turtle and place it on the screen. It sets up the placement of the turtle at y = 430. This function is placed in the set up function of the background.js file. 
 function initializeCharacter() {
   yturtle = 430;
@@ -37,6 +37,8 @@ function updateCharacter() {
 
   //The code below draws the parts of the turtle. 
   noStroke();
+  image(turtle, 140, yturtle);
+ /*
   //body
   fill(55, 132, 78);
   ellipse(140, yturtle, 80, 30);
@@ -49,4 +51,5 @@ function updateCharacter() {
   //head
   triangle(90, yturtle, 100, yturtle-2, 100, yturtle+2);
   ellipse(180, yturtle, 10, 7);
+ */
 }
