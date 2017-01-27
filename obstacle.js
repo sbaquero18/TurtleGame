@@ -27,7 +27,7 @@
  */
 //These are the four variables that define where the two jellyfish are at a given time
 var jx, jy, jx2, jy2;
-
+var jellyfish = loadImage("jellyfish.png");
 
 //setting the starting x and y values for each jellyfish
 function initializeObstacle() {
@@ -54,6 +54,9 @@ function updateObstacle() {
     jx2 = jx2 - 10;
   }
   //the code that draws the obstacle
+  image(jellyfish, jx, jy);
+  image(jellyfish, jx2, jy2);
+  /*
   fill(178, 102, 255); //set color of the main body of jellyfish
   ellipse(jx, jy, 24, 24); //make main body of jellyfish
   ellipse(jx2, jy2, 24, 24); //make another main body of jellyfish
@@ -69,4 +72,5 @@ function updateObstacle() {
   line(jx2 - 6, jy2 + 6, jx2 - 6, jy2 + 24);
   line(jx2 + 6, jy2 + 6, jx2 + 6, jy2 + 24);
   line(jx2, jy2 + 12, jx2, jy2 + 30); //yeah a lot of jelly-legs
+  */
 }
