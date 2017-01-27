@@ -19,7 +19,7 @@ call the update functions for the character and the obstacle*/
 var score;
 var scoreText;
 var highscore = 0;
-var fish  = loadImage("fish.png");
+var fish;
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -27,7 +27,9 @@ function setup() {
  
   //these portions of code create the variables for each fish so
  //that they operate independantly within my code
- 
+ function Preload() {
+ fish  = loadImage("fish.png");
+} 
  //This creates the size and color of the background
  createCanvas(640, 480);
   background(50, 115, 219);
