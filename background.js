@@ -19,7 +19,7 @@ call the update functions for the character and the obstacle*/
 var score;
 var scoreText;
 var highscore = 0;
-var gameplay = false;
+var gameplay = false; //variable that represent the state of the game
 
 //This is the function that dictates the setup of our
 //code and creates everything that we need in our scene
@@ -75,22 +75,22 @@ function Updatescore() {
 //we dont have trails of vectors that follow our objects around. 
 function draw() {
   //clear();
-  if(keyIsPressed) {
-   gameplay = true;	  
+  if(keyIsPressed) { //if player press any key
+   gameplay = true; //game is now playing  
   }
-  if(gameplay == true) {
-   background(0, 0, 255);
+  if(gameplay == true) { //if game is playing
+   background(0, 0, 255); //display all the game componenets
    updateBackground();
    updateCharacter();
    updateObstacle();
    collide();
    Updatescore();
-  } else {
+  } else { //if not
    fill(0, 0, 0); //set the color of the font
    textSize(40); //set the size of the font
-   text("Turtle Game", 320, 300); //display the score on the screen
+   text("Turtle Game", 320, 300); //display the text on the screen
    textSize(20); //set the size of the font
-   text("Press Any Key to Play", 320, 100); //display the score on the screen
+   text("Press Any Key to Play", 320, 100); //display the text on the screen
   }
 }
 
