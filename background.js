@@ -88,7 +88,7 @@ function draw() {
   } else { //if not
    fill(0, 0, 0); //set the color of the font
    textSize(40); //set the size of the font
-   text("Turtle Game", 210, 300); //display the text on the screen
+   text("Turtle Game", 240, 300); //display the text on the screen
    textSize(20); //set the size of the font
    text("Press Any Key to Play", 230, 100); //display the text on the screen
   }
