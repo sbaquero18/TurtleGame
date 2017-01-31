@@ -65,10 +65,10 @@ function Updatescore() {
  fill(0, 0, 0); //set the color of the font
  textSize(20); //set the size of the font
  text("Score: " + scoreText, 450, 20); //display the score on the screen
- if(highscore < scoreText) {
+ if(highscore < scoreText) { //this update the high score when current score is higher than highscore
   highscore = scoreText;
  }
- document.getElementById("scoreboard").innerHTML = "High Score: " + highscore;
+ document.getElementById("scoreboard").innerHTML = "High Score: " + highscore; //this change the content of the div in HTML file that display the high score
 }
 //This draws and redraws our background after each unit of time so that
 //we dont have trails of vectors that follow our objects around. 
